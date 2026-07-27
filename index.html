@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>CV. Alindra Sedayu (TaniIn) - Supplier Sayuran Segar & Olahan B2B</title>
+    <meta name="description" content="CV. Alindra Sedayu (TaniIn) adalah supplier B2B terpercaya yang menyediakan 100% sayuran segar, umbi-umbian, dan produk olahan berkualitas langsung dari mitra petani.">
+    <meta name="keywords" content="supplier sayur, supplier sayuran B2B, taniin, alindra sedayu, jagung pipil, veggies mix, wortel dadu, sayuran segar karawang, supplier restoran">
+    <meta name="author" content="CV. Alindra Sedayu">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS (Animate On Scroll) & FontAwesome -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Custom Swing Animation Style */
+        [data-aos="swing-in"] {
+            transform: rotateX(-30deg) translateY(50px);
+            opacity: 0;
+            transition-property: transform, opacity;
+            transform-origin: top center;
+        }
+        [data-aos="swing-in"].aos-animate {
+            transform: rotateX(0deg) translateY(0);
+            opacity: 1;
+        }
+        
+        /* Floating WA Animation */
+        .pulse-wa {
+            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            animation: pulse-green 2s infinite;
+        }
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* Animasi Berjalan Kanan ke Kiri (Marquee) */
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            padding: 20px 0;
+            background: #f8fafc;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: scroll-left 25s linear infinite;
+        }
+        .marquee-content:hover {
+            animation-play-state: paused; /* Berhenti saat di-hover/disentuh */
+        }
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); } /* -50% karena kontennya diduplikat 2x */
+        }
+        .marquee-item {
+            display: inline-block;
+            width: 250px;
+            height: 180px;
+            margin-right: 20px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .marquee-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .marquee-item:hover img {
+            transform: scale(1.1);
+        }
+        .marquee-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 15px 10px 10px 10px;
+            font-size: 0.875rem;
+            font-weight: bold;
+            white-space: normal;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2">
+                <i class="fa-solid fa-leaf text-brand-600 text-2xl"></i>
+                <div class="flex flex-col">
+                    <span class="font-extrabold text-lg leading-none text-brand-900">TaniIn.</span>
+                    <span class="text-[10px] text-gray-500 font-medium tracking-wider uppercase">CV. Alindra Sedayu</span>
+                </div>
+            </a>
+            <div class="flex items-center gap-3">
+                <a href="https://www.instagram.com/taniin.indonesia/" target="_blank" class="p-2 text-pink-600 hover:bg-pink-50 rounded-full transition">
+                    <i class="fa-brands fa-instagram text-xl"></i>
+                </a>
+                <a href="https://wa.me/6283183921044" target="_blank" class="hidden sm:flex items-center gap-2 bg-brand-600 text-white px-4 py-2 rounded-full font-semibold text-sm hover:bg-brand-700 transition">
+                    <i class="fa-brands fa-whatsapp"></i> Hubungi Kami
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="relative bg-gradient-to-b from-brand-50 to-white py-12 lg:py-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto" data-aos="swing-in">
+                <span class="inline-block px-3 py-1 bg-brand-100 text-brand-800 text-xs font-semibold rounded-full uppercase tracking-wider mb-4">
+                    Supplier Sayuran B2B Terpercaya
+                </span>
+                <h1 class="text-3xl sm:text-5xl font-black text-gray-900 tracking-tight leading-tight mb-4">
+                    Menghadirkan 100% Sayuran Segar & Berkualitas Terbaik
+                </h1>
+                <p class="text-base sm:text-lg text-gray-600 mb-8 leading-relaxed">
+                    Langsung dari mitra petani lokal ke bisnis Anda. Kami memutus rantai tengkulak untuk efisiensi harga bagi restoran, hotel, dan catering.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stat Counter Section -->
+    <section class="py-8 bg-brand-700 text-white shadow-inner">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center" data-aos="swing-in">
+                <div class="p-4 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/10 transform hover:-translate-y-1 transition duration-300">
+                    <div class="text-3xl sm:text-4xl font-black text-amber-300 mb-1">100+</div>
+                    <div class="text-xs sm:text-sm font-medium text-brand-100">Klien B2B Aktif</div>
+                </div>
+                <div class="p-4 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/10 transform hover:-translate-y-1 transition duration-300">
+                    <div class="text-3xl sm:text-4xl font-black text-amber-300 mb-1">10+</div>
+                    <div class="text-xs sm:text-sm font-medium text-brand-100">Wilayah Mitra Tani</div>
+                </div>
+                <div class="p-4 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/10 transform hover:-translate-y-1 transition duration-300">
+                    <div class="text-3xl sm:text-4xl font-black text-amber-300 mb-1">2018</div>
+                    <div class="text-xs sm:text-sm font-medium text-brand-100">Berpengalaman Sejak</div>
+                </div>
+                <div class="p-4 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/10 transform hover:-translate-y-1 transition duration-300">
+                    <div class="text-3xl sm:text-4xl font-black text-amber-300 mb-1">100%</div>
+                    <div class="text-xs sm:text-sm font-medium text-brand-100">Segar & Higienis</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-6 bg-white overflow-hidden border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 mb-4">
+            <h2 class="text-lg font-bold text-gray-800 flex items-center gap-2">
+                <i class="fa-solid fa-camera-retro text-brand-500"></i> Galeri Produk Segar Kami
+            </h2>
+        </div>
+        
+        <!-- Marquee Container -->
+        <div class="marquee-container">
+            <!-- Konten yang diduplikat agar animasinya tidak terputus (infinite loop) -->
+            <div class="marquee-content">
+                <!-- Set 1 -->
+                <div class="marquee-item">
+                    <img src="https://asset.kompas.com/crops/UzeRQrH6pn9sB8uEfXlDPn0gyEo=/0x107:1280x960/1200x800/data/photo/2021/09/27/615150cfa4bd3.jpg" alt="Kubis Segar" onerror="this.src='https://placehold.co/500x300/e2e8f0/475569?text=Kubis+Segar'">
+                    <div class="marquee-label">Kubis Segar Langsung Panen</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-820nv-mnbc5ckyf7ydc1" alt="Kentang" onerror="this.src='https://placehold.co/500x300/e2e8f0/475569?text=Kentang'">
+                    <div class="marquee-label">Kentang Pilihan Grade A</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?auto=format&fit=crop&w=500&q=80" alt="Wortel" onerror="this.src='https://placehold.co/500x300/e2e8f0/475569?text=Wortel'">
+                    <div class="marquee-label">Wortel Segar Manis</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="https://cdn.antaranews.com/cache/1200x800/2018/09/shutterstock_313022414.jpg" alt="Sayuran Hijau" onerror="this.src='https://placehold.co/500x300/e2e8f0/475569?text=Sayur+Hijau'">
+                    <div class="marquee-label">Berbagai Sayuran Daun Hijau</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=500&q=80" alt="Jagung Manis" onerror="this.src='https://placehold.co/500x300/e2e8f0/475569?text=Jagung'">
+                    <div class="marquee-label">Jagung Manis & Pipil</div>
+                </div>
+                
+                <!-- Set 2 (Duplikasi untuk efek Infinite Scroll) -->
+                <div class="marquee-item">
+                    <img src="https://asset.kompas.com/crops/UzeRQrH6pn9sB8uEfXlDPn0gyEo=/0x107:1280x960/1200x800/data/photo/2021/09/27/615150cfa4bd3.jpg" alt="Kubis Segar" onerror="this.src='https://placehold.co/500x300/e2e8f0/475569?text=Kubis+Segar'">
+                    <div class="marquee-label">Kubis Segar Langsung Panen</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="https://images.unsplash.com/photo-1596910547037-846b1980329f?auto=format&fit=crop&w=500&q=80" alt="Kentang" onerror="this.src='https://placehold.co/500x300/e2e8f0/475569?text=Kentang'">
+                    <div class="marquee-label">Kentang Pilihan Grade A</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?auto=format&fit=crop&w=500&q=80" alt="Wortel" onerror="this.src='https://placehold.co/500x300/e2e8f0/475569?text=Wortel'">
+                    <div class="marquee-label">Wortel Segar Manis</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="https://img-cdn.medkomtek.com/PtqeKJ5dCSzh515TzHhPUimp3iM=/510x395/smart/filters:quality(100):format(webp)/article/vjOaswjYm8X33dJRjtOP4/original/079343600_1553951599-Benarkah-Penderita-Asam-Urat-Harus-Pantang-Sayuran-Hijau-By-Shulevskyy-Volodymyr-Shutterstock.jpg" alt="Sayuran Hijau" onerror="this.src='https://placehold.co/500x300/e2e8f0/475569?text=Sayur+Hijau'">
+                    <div class="marquee-label">Berbagai Sayuran Daun Hijau</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=500&q=80" alt="Jagung Manis" onerror="this.src='https://placehold.co/500x300/e2e8f0/475569?text=Jagung'">
+                    <div class="marquee-label">Jagung Manis & Pipil</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 sm:py-16 bg-gray-50" id="produk">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12" data-aos="swing-in">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Katalog Produk Utama</h2>
+                <p class="text-gray-600 text-sm sm:text-base">Pilihan pasokan lengkap sesuai standar spesifikasi dapur profesional</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Kategori 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-xl transition flex flex-col" data-aos="swing-in" data-aos-delay="100">
+                    <div class="h-48 w-full bg-gray-200 overflow-hidden">
+                        <img src="https://img-cdn.medkomtek.com/PtqeKJ5dCSzh515TzHhPUimp3iM=/510x395/smart/filters:quality(100):format(webp)/article/vjOaswjYm8X33dJRjtOP4/original/079343600_1553951599-Benarkah-Penderita-Asam-Urat-Harus-Pantang-Sayuran-Hijau-By-Shulevskyy-Volodymyr-Shutterstock.jpg" alt="Sayuran Hijau" class="w-full h-full object-cover hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x400/e2e8f0/475569?text=Sayuran+Hijau'">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Sayuran Hijau</h3>
+                        <p class="text-gray-600 text-sm mb-4">Dipetik langsung dari kebun mitra petani, menjaga kadar air dan kesegaran daun.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 mb-6 flex-1">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Kubis / Kol Segar</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Buncis & Kacang Panjang</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Kangkung & Bayam Kebun</li>
+                        </ul>
+                        <a href="https://wa.me/6283183921044?text=Halo,%20saya%20butuh%20harga%20Sayuran%20Hijau" target="_blank" class="block text-center py-2.5 bg-brand-50 text-brand-700 font-semibold rounded-lg hover:bg-brand-100 transition text-sm">
+                            Tanya Harga Sayur Hijau
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kategori 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-xl transition flex flex-col" data-aos="swing-in" data-aos-delay="200">
+                    <div class="h-48 w-full bg-gray-200 overflow-hidden">
+                        <img src="https://www.asterra.id/wp-content/uploads/2023/11/ubi-web.png" alt="Umbi Umbian" class="w-full h-full object-cover hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x400/e2e8f0/475569?text=Umbi+Umbian'">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Umbi-Umbian</h3>
+                        <p class="text-gray-600 text-sm mb-4">Dibersihkan dan dipilah dengan grade kualitas mutu terbaik untuk dapur Anda.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 mb-6 flex-1">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600"></i> Kentang Dieng Grade A</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600"></i> Ubi Ungu & Cilembu</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-600"></i> Bawang (Merah, Putih, Bombay)</li>
+                        </ul>
+                        <a href="https://wa.me/6283183921044?text=Halo,%20saya%20butuh%20harga%20Umbi-umbian" target="_blank" class="block text-center py-2.5 bg-amber-50 text-amber-800 font-semibold rounded-lg hover:bg-amber-100 transition text-sm">
+                            Tanya Harga Umbi-Umbian
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kategori 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-xl transition flex flex-col" data-aos="swing-in" data-aos-delay="300">
+                    <div class="h-48 w-full bg-gray-200 overflow-hidden">
+                        <img src="https://assets.cookin.id/crop/0x0:0x0/x/photo/2018/12/02/2331546054.jpg" alt="Produk Olahan Potong" onerror="this.src='https://placehold.co/600x400/e2e8f0/475569?text=Sayuran+Potong/Olahan'" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Produk Olahan Potong</h3>
+                        <p class="text-gray-600 text-sm mb-4">Solusi praktis siap masak untuk efisiensi waktu dapur restoran B2B.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 mb-6 flex-1">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Jagung Pipil Segar</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Veggies Mix & Wortel Dadu</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Kentang Dadu & Buncis Dadu</li>
+                        </ul>
+                        <a href="https://wa.me/6283183921044?text=Halo,%20saya%20butuh%20harga%20Produk%20Olahan%20(Veggies%20Mix)" target="_blank" class="block text-center py-2.5 bg-emerald-50 text-emerald-800 font-semibold rounded-lg hover:bg-emerald-100 transition text-sm">
+                            Tanya Harga Olahan Potong
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seksi Jangkauan Pengiriman -->
+    <section class="py-12 sm:py-16 bg-gradient-to-br from-brand-900 via-brand-800 to-gray-900 text-white relative overflow-hidden" id="jangkauan">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-10" data-aos="swing-in">
+                <span class="inline-block px-3 py-1 bg-brand-800/80 text-brand-200 text-xs font-semibold rounded-full uppercase tracking-wider mb-3 border border-brand-700">
+                    <i class="fa-solid fa-truck-fast mr-1"></i> Logistik & Distribusi
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-bold mb-3">Jangkauan Pengiriman</h2>
+                <p class="text-brand-100 text-sm sm:text-base">Pengiriman cepat dengan armada terintegrasi untuk wilayah:</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 text-center" data-aos="swing-in" data-aos-delay="100">
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/10 hover:bg-white/20 hover:scale-105 transition duration-300 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-city text-amber-400 text-3xl mb-3"></i>
+                    <div class="font-bold text-sm sm:text-base">Jabodetabek</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/10 hover:bg-white/20 hover:scale-105 transition duration-300 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-industry text-amber-400 text-3xl mb-3"></i>
+                    <div class="font-bold text-sm sm:text-base">Karawang</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/10 hover:bg-white/20 hover:scale-105 transition duration-300 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-mountain text-amber-400 text-3xl mb-3"></i>
+                    <div class="font-bold text-sm sm:text-base">Purwakarta</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/10 hover:bg-white/20 hover:scale-105 transition duration-300 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-wheat-awn text-amber-400 text-3xl mb-3"></i>
+                    <div class="font-bold text-sm sm:text-base">Subang</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/10 hover:bg-white/20 hover:scale-105 transition duration-300 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-tree text-amber-400 text-3xl mb-3"></i>
+                    <div class="font-bold text-sm sm:text-base">Bandung Raya</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/10 hover:bg-white/20 hover:scale-105 transition duration-300 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-map-location-dot text-amber-400 text-3xl mb-3"></i>
+                    <div class="font-bold text-sm sm:text-base">Dan Sekitarnya</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="swing-in">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Dipercaya oleh Restoran Terkemuka</h2>
+            <div class="flex flex-wrap justify-center gap-3">
+                <span class="bg-gray-100 px-4 py-2 rounded-full text-sm font-semibold text-gray-700 border border-gray-200">Bandar Djakarta</span>
+                <span class="bg-gray-100 px-4 py-2 rounded-full text-sm font-semibold text-gray-700 border border-gray-200">PT CJ Foodville</span>
+                <span class="bg-gray-100 px-4 py-2 rounded-full text-sm font-semibold text-gray-700 border border-gray-200">Quick Chicken</span>
+                <span class="bg-gray-100 px-4 py-2 rounded-full text-sm font-semibold text-gray-700 border border-gray-200">Emados Turkey</span>
+                <span class="bg-gray-100 px-4 py-2 rounded-full text-sm font-semibold text-gray-700 border border-gray-200">Red Suki</span>
+                <span class="bg-gray-100 px-4 py-2 rounded-full text-sm font-semibold text-gray-700 border border-gray-200">100+ Konsumen Lainnya</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 text-center text-xs space-y-3">
+            <p class="text-gray-200 font-semibold text-sm">CV. Alindra Sedayu - TaniIn</p>
+            <p>Komp Villa Permata Blok EF 04 No 19-21, Cikampek Barat, Kab. Karawang</p>
+            <div class="flex justify-center gap-4 text-lg pt-2">
+                <a href="https://www.instagram.com/taniin.indonesia/" target="_blank" class="hover:text-pink-500 transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/6283183921044" target="_blank" class="hover:text-green-500 transition"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6283183921044?text=Halo%20CV.%20Alindra%20Sedayu,%20saya%20ingin%20konsultasi%20pasokan%20sayur" 
+       target="_blank" 
+       class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:bg-green-600 transition-all duration-300 pulse-wa group">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Initialize AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, easing: 'ease-out-cubic' });
+    </script>
+</body>
+</html>
