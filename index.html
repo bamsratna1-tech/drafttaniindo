@@ -154,7 +154,7 @@
                     Menghadirkan <span class="text-emerald-400">100% Sayuran Segar</span> & Berkualitas Terbaik
                 </h1>
                 <p class="text-base sm:text-xl text-gray-200 mb-8 leading-relaxed font-normal drop-shadow">
-                    Langsung dari mitra petani lokal ke bisnis Anda. Kami memutus rantai tengkulak untuk efisiensi harga bagi restoran, hotel, dan catering.
+                     Kami memutus rantai tengkulak untuk efisiensi harga bagi restoran, hotel, dan catering.
                 </p>
             </div>
         </div>
@@ -290,9 +290,42 @@
 
                 <!-- Kategori 3 -->
                 <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-xl transition flex flex-col" data-aos="swing-in" data-aos-delay="300">
-                    <div class="h-48 w-full bg-gray-200 overflow-hidden">
-                        <img src="https://assets.cookin.id/crop/0x0:0x0/x/photo/2018/12/02/2331546054.jpg" alt="Produk Olahan Potong" onerror="this.src='https://placehold.co/600x400/e2e8f0/475569?text=Sayuran+Potong/Olahan'" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    <div class="relative h-48 w-full bg-gray-200 overflow-hidden group">
+                        
+                        <!-- Slider Track -->
+                        <div id="olahanSlider" class="flex h-full transition-transform duration-500 ease-out" style="transform: translateX(0%);">
+                            <!-- Slot Gambar 1 -->
+                            <div class="min-w-full h-full">
+                                <img src="aset/buncis.jpeg" alt="Produk Olahan Potong 1" class="w-full h-full object-cover">
+                            </div>
+                            <!-- Slot Gambar 2 (Ganti URL dengan gambar dari klien) -->
+                            <div class="min-w-full h-full">
+                                <img src="aset/kentang.jpeg" alt="Produk Olahan Potong 2" class="w-full h-full object-cover">
+                            </div>
+                            <!-- Slot Gambar 3 (Ganti URL dengan gambar dari klien) -->
+                            <div class="min-w-full h-full">
+                                <img src="aset/jagung.jpeg" alt="Produk Olahan Potong 3" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+
+                        <!-- Tombol Navigasi Kiri / Kanan -->
+                        <button onclick="prevOlahanSlide()" type="button" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-brand-700 rounded-full w-7 h-7 flex items-center justify-center shadow-md transition opacity-80 sm:opacity-0 sm:group-hover:opacity-100 z-10 focus:outline-none">
+                            <i class="fa-solid fa-chevron-left text-xs"></i>
+                        </button>
+                        <button onclick="nextOlahanSlide()" type="button" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-brand-700 rounded-full w-7 h-7 flex items-center justify-center shadow-md transition opacity-80 sm:opacity-0 sm:group-hover:opacity-100 z-10 focus:outline-none">
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+
+                        <!-- Indikator Dots -->
+                        <div class="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5 z-10">
+                            <div class="olahan-dot w-2 h-2 rounded-full bg-brand-500 transition-all duration-300"></div>
+                            <div class="olahan-dot w-2 h-2 rounded-full bg-white/70 transition-all duration-300"></div>
+                            <div class="olahan-dot w-2 h-2 rounded-full bg-white/70 transition-all duration-300"></div>
+                        </div>
+                        
                     </div>
+                    <!-- End Slider Kategori 3 -->
+
                     <div class="p-6 flex-1 flex flex-col">
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Produk Olahan Potong</h3>
                         <p class="text-gray-600 text-sm mb-4">Solusi praktis siap masak untuk efisiensi waktu dapur restoran B2B.</p>
@@ -400,9 +433,11 @@
         <div class="max-w-7xl mx-auto px-4 text-center text-xs space-y-3">
             <p class="text-gray-200 font-semibold text-sm">CV. Alindra Sedayu - TaniIn</p>
             <p>Komp Villa Permata Blok EF 04 No 19-21, Cikampek Barat, Kab. Karawang</p>
+            <p><a href="mailto:sedayualiandra@gmail.com" class="hover:text-brand-400 transition"><i class="fa-solid fa-envelope mr-1"></i> sedayualiandra@gmail.com</a></p>
             <div class="flex justify-center gap-4 text-lg pt-2">
                 <a href="https://www.instagram.com/taniin.indonesia/" target="_blank" class="hover:text-pink-500 transition"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://wa.me/6283183921044" target="_blank" class="hover:text-green-500 transition"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:sedayualiandra@gmail.com" target="_blank" class="hover:text-blue-400 transition"><i class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
     </footer>
@@ -418,6 +453,56 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 800, once: true, easing: 'ease-out-cubic' });
+// ==========================================
+        // Slider Logic untuk Produk Olahan Potong
+        // ==========================================
+        let olahanCurrentIndex = 0;
+        const olahanTotalSlides = 3;
+        const olahanSlider = document.getElementById('olahanSlider');
+        const olahanDots = document.querySelectorAll('.olahan-dot');
+        let olahanAutoPlayInterval;
+
+        function updateOlahanSlider() {
+            // Geser track slider
+            olahanSlider.style.transform = `translateX(-${olahanCurrentIndex * 100}%)`;
+            
+            // Update warna indikator dot
+            olahanDots.forEach((dot, index) => {
+                if(index === olahanCurrentIndex) {
+                    dot.classList.remove('bg-white/70');
+                    dot.classList.add('bg-brand-500', 'w-4'); // w-4 agar memanjang sedikit saat aktif
+                } else {
+                    dot.classList.remove('bg-brand-500', 'w-4');
+                    dot.classList.add('bg-white/70');
+                }
+            });
+        }
+
+        function nextOlahanSlide() {
+            olahanCurrentIndex = (olahanCurrentIndex + 1) % olahanTotalSlides;
+            updateOlahanSlider();
+            resetOlahanAutoPlay();
+        }
+
+        function prevOlahanSlide() {
+            olahanCurrentIndex = (olahanCurrentIndex - 1 + olahanTotalSlides) % olahanTotalSlides;
+            updateOlahanSlider();
+            resetOlahanAutoPlay();
+        }
+
+        function startOlahanAutoPlay() {
+            // Ganti slide setiap 3.5 detik
+            olahanAutoPlayInterval = setInterval(nextOlahanSlide, 3500); 
+        }
+
+        function resetOlahanAutoPlay() {
+            clearInterval(olahanAutoPlayInterval);
+            startOlahanAutoPlay();
+        }
+
+        // Inisialisasi slider pertama kali
+        updateOlahanSlider();
+        startOlahanAutoPlay();
     </script>
 </body>
 </html>
